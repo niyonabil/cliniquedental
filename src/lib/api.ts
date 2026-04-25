@@ -1,5 +1,6 @@
 // Secure Local File Storage System with Encryption
 // Data is stored in encrypted .dat files and protected against unauthorized modification
+import axios from 'axios';
 
 const STORAGE_KEY_PREFIX = 'dental_clinic_';
 const ENCRYPTION_KEY = 'dental_clinic_secure_key_2024'; // In production, use environment variable
@@ -132,7 +133,9 @@ const patientsStorage = new SecureStorage('patients');
 const appointmentsStorage = new SecureStorage('appointments');
 const dentistsStorage = new SecureStorage('dentists');
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+// Since we're using local storage only, no need for API URL
+// This is a client-side only application with secure local storage
+const API_BASE_URL = 'http://localhost:3001/api'; // Placeholder, not used
 
 const api = axios.create({
     baseURL: API_BASE_URL,
