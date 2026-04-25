@@ -1,57 +1,57 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-dist/
-build/
-target/
-
 # Dependencies
 node_modules/
-venv/
-.venv/
+
+# Environment variables
 .env
-.env.local
-.env.*
 
-# Logs and temp files
+# Build outputs
+dist/
+build/
+server/dist/
+
+# Logs
 *.log
-*.tmp
-*.swp
+server/server.log
 
-# Editors
+# Editor/IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS
+# OS generated
 .DS_Store
 Thumbs.db
+
+# Package lock
+package-lock.json
+server/node_modules/.package-lock.json
+
+# TypeScript
+*.tsbuildinfo
+
+# Temporary files
+*.tmp
+*.temp
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Python specific
-*.pyc
+# Python virtual environments (if any Python parts)
+venv/
+.venv/
 __pycache__/
-.mypy_cache/
-.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
 
-# Node specific
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Archives
+# Compressed archives
 *.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
 *.gz
-*.tar
-*.tgz
 *.bz2
 *.xz
 *.7z
@@ -66,9 +66,62 @@ yarn-error.log*
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-```*.dat
-server/secure_data/
+*.tar
+*.tgz
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificate
+*.crt
+*.key
+*.pem
+
+# System files
+*.swp
+*.swo
+
+# Browsers
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.nyc_output/
+.mypy_cache/
+.pytest_cache/
+.jest/
+
+# Distribution / packaging
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage.xml
+coverage.xml
+*.cover
+*.log
+
+# Translations
+*.mo
+*.pot
+
+# Documentation
+docs/_build/
+
+# Various IDEs
+.project
+*.pydevproject
+*.sublime-project
+*.sublime-workspace
+nbproject/
+*.nbproj
+*.iml
+*.hprof
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+```node_modules/\nserver/node_modules/\n*.dat\nsecure_data/\nserver/secure_data/\n.env\n.DS_Store
